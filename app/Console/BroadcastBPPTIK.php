@@ -47,7 +47,7 @@ class BroadcastBPPTIK extends Command
         // }
         // $data=BPPTIK_User::orderBy('id','desc')->where('id',126744)->get();
         $current_queue=BPPTIK_Queue::orderBy('id','desc')->firstOrFail();
-        $data=BPPTIK_User::where('id','>',$current_queue->users_id)->limit(10)->orderBy('id','asc')->get();
+        $data=BPPTIK_User::where('id','>',$current_queue->users_id)->limit(50)->orderBy('id','asc')->get();
         // dd($data);
         $no=1;
         foreach ($data as $key ) {
