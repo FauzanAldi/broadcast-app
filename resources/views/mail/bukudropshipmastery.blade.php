@@ -128,7 +128,7 @@
                                       <td><img src="https://bisniscustom.id/diskon.png"><td>
                                     </tr>
                                     <tr>
-                                      <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; background-color: #3498db; border-radius: 5px; text-align: center;"> <a href="https://shopee.co.id/Ebook-DROPSHIP-MASTERY-Asli-Jualan-Laris-Tanpa-Stok-dan-Tatap-Muka-i.141727809.7471585394" target="_blank" style="display: inline-block; color: #ffffff; background-color: #3498db; border: solid 1px #3498db; border-radius: 5px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 14px; font-weight: bold; margin: 0; padding: 12px 25px; text-transform: capitalize; border-color: #3498db;">Beli Sekarang !!</a> </td>
+                                      <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; background-color: #3498db; border-radius: 5px; text-align: center;"> <a href="https://shopee.co.id/Buku-DROPSHIP-MASTERY-Asli-Jualan-Laris-Tanpa-Stok-dan-Tatap-Muka-Beserta-Bonus-3-Ebook-i.141727809.6746501775" target="_blank" style="display: inline-block; color: #ffffff; background-color: #3498db; border: solid 1px #3498db; border-radius: 5px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 14px; font-weight: bold; margin: 0; padding: 12px 25px; text-transform: capitalize; border-color: #3498db;">Beli Sekarang !!</a> </td>
                                     </tr>
                                   </tbody>
                                 </table>
