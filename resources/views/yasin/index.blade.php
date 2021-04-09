@@ -9,15 +9,8 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>Breezed HTML Bootstrap Template</title>
+    <title>Yasin Murah ID</title>
 
-<!--
-
-Breezed Template
-
-https://templatemo.com/tm-543-breezed
-
--->
     <!-- Additional CSS Files -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 
@@ -52,15 +45,15 @@ https://templatemo.com/tm-543-breezed
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="index.html" class="logo">
-                            .BREEZED
+                            YASIN MURAH ID
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="#about">About</a></li>
-                            <li class="scroll-to-section"><a href="#projects">Projects</a></li>
-                            <li class="submenu">
+                            <li class="scroll-to-section"><a href="#top" class="active">Beranda</a></li>
+                            <li class="scroll-to-section"><a href="#about">Tentang Kami</a></li>
+                            <li class="scroll-to-section"><a href="#projects">Produk</a></li>
+                            <!-- <li class="submenu">
                                 <a href="javascript:;">Drop Down</a>
                                 <ul>
                                     <li><a href="">About Us</a></li>
@@ -68,8 +61,8 @@ https://templatemo.com/tm-543-breezed
                                     <li><a href="">FAQ's</a></li>
                                     <li><a href="">Blog</a></li>
                                 </ul>
-                            </li>
-                            <li class="scroll-to-section"><a href="#contact-us">Contact Us</a></li> 
+                            </li> -->
+                            <li class="scroll-to-section"><a href="#contact-us">Kontak Kami</a></li> 
                             <div class="search-icon">
                                 <a href="#search"><i class="fa fa-search"></i></a>
                             </div>
@@ -152,37 +145,37 @@ https://templatemo.com/tm-543-breezed
                 <div class="col-lg-6 col-md-6 col-xs-12">
                     <div class="left-text-content">
                         <div class="section-heading">
-                            <h6>About Us</h6>
-                            <h2>We work with top brands and startups</h2>
+                            <h6>Tentang Kami</h6>
+                            <h2>Kenapa Pesan di YasinMurah ID ?</h2>
                         </div>
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
                                 <div class="service-item">
                                     <img src="assets/images/service-item-01.png" alt="">
-                                    <h4>Top Notch</h4>
+                                    <h4>Proses Cepat</h4>
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div class="service-item">
                                     <img src="assets/images/service-item-01.png" alt="">
-                                    <h4>Robust</h4>
+                                    <h4>Harga Mulai 5 Ribu</h4>
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div class="service-item">
                                     <img src="assets/images/contact-info-03.png" alt="">
-                                    <h4>Reliable</h4>
+                                    <h4>Pilihan Design Banyak</h4>
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div class="service-item">
                                     <img src="assets/images/contact-info-03.png" alt="">
-                                    <h4>Up-to-date</h4>
+                                    <h6><b>Minimal Pemesanan Hanya 10 Pcs</b></h6>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <a href="#" class="main-button-icon">
-                                    Learn More <i class="fa fa-arrow-right"></i>
+                                    Pesan Sekarang <i class="fa fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -190,9 +183,9 @@ https://templatemo.com/tm-543-breezed
                 </div>
                 <div class="col-lg-6 col-md-6 col-xs-12">
                     <div class="right-text-content">
-                        <p><a rel="nofollow noopener" href="https://templatemo.com/tm-543-breezed" target="_parent">Breezed HTML Template</a> is provided by TemplateMo for absolutely free of charge. You can download, edit and use this for your non-commercial and commercial websites. 
-                        <br><br>Redistributing this template as a downloadable ZIP file on any template collection website is strictly prohibited. You will need to talk to us if you want to redistribute this template. Thank you.
-                      <br><br>This is a Bootstrap v4.3.1 CSS layout. Do you like it? You can feel free to <a rel="nofollow noopener" href="https://templatemo.com/contact" target="_parent">talk to us</a> if you have anything.</p>
+                        <p><a rel="nofollow noopener" href="{{ url('') }}" target="_parent">Yasin Murah ID</a> adalah Pusat Cetak Buku Yasin dan Tahlil Profesional dengan JAMINAN Harga Termurah. 
+                        <br><br>Cocok Untuk anda yang menginginkan pengerjaan yang cepat, kami selalu berusaha memberikan pelayanan secepat mungkin setelah design di approve.
+                      <br><br><b>GRATIS ONGKOS KIRIM* PESAN SEKARANG JUGA.</b></p>
                     </div>
                 </div>
             </div>
@@ -210,11 +203,11 @@ https://templatemo.com/tm-543-breezed
                             <img src="assets/images/features-icon-1.png" alt="">
                         </div>
                         <div class="features-content">
-                            <h4>Initial Work</h4>
-                            <p>Proin euismod sem ut diam ultricies, ut faucibus velit ultricies. Nam eu turpis quam. Duis ac condimentum eros.</p>
-                            <a href="#" class="text-button-icon">
+                            <h4>Produksi Sangatlah Cepat</h4>
+                            <p>Proses Pembuatan Sangatlah Cepat.. Proses Produksi Berkisar Antara 1 - 3 Hari saja setelah Design di Approve</p>
+                            <!-- <a href="#" class="text-button-icon">
                                 Learn More <i class="fa fa-arrow-right"></i>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                 </div>
@@ -224,11 +217,11 @@ https://templatemo.com/tm-543-breezed
                             <img src="assets/images/features-icon-1.png" alt="">
                         </div>
                         <div class="features-content">
-                            <h4>Master Planning</h4>
-                            <p>Proin euismod sem ut diam ultricies, ut faucibus velit ultricies. Nam eu turpis quam. Duis ac condimentum eros.</p>
-                            <a href="#" class="text-button-icon">
+                            <h4>Minimal Order 10 pcs</h4>
+                            <p>Minimal Pemesanan Hanyalah 10 pcs. Jadi jangan ragu untuk Pesan</p>
+                            <!-- <a href="#" class="text-button-icon">
                                 Learn More <i class="fa fa-arrow-right"></i>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                 </div>
@@ -238,11 +231,11 @@ https://templatemo.com/tm-543-breezed
                             <img src="assets/images/features-icon-1.png" alt="">
                         </div>
                         <div class="features-content">
-                            <h4>Smooth Execution</h4>
-                            <p>Proin euismod sem ut diam ultricies, ut faucibus velit ultricies. Nam eu turpis quam. Duis ac condimentum eros.</p>
-                            <a href="#" class="text-button-icon">
+                            <h4>Gratis Ongkir ke Jabodetabek</h4>
+                            <p>Untuk Pengiriman Kami Gratis Ongkir ke Jabodetabek dan Ada Potongan Ongkir untuk di Luar Jabodetabek</p>
+                            <!-- <a href="#" class="text-button-icon">
                                 Learn More <i class="fa fa-arrow-right"></i>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                 </div>
@@ -257,23 +250,23 @@ https://templatemo.com/tm-543-breezed
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
                     <div class="section-heading">
-                        <h6>Subscribe Newsletters</h6>
-                        <h2>Don’t miss this chance!</h2>
+                        <h6>Mau Mendapatkan Promo Gratis Ongkir dan Promo Lainnya !!</h6>
+                        <h2>Jangan Kehilangan Kesempatan ini !!</h2>
                     </div>
                     <div class="subscribe-content">
-                        <p>Vivamus suscipit blandit nibh, in cursus mi. Proin vel blandit metus, et auctor elit. Vivamus tincidunt tristique convallis. Ut nec odio vel arcu euismod semper nec ac sem.</p>
+                        <p>Kami Selalu memberikan Penawaran dan Promo Menarik Setiap Saat. Kami sangat ingin membantu saudara sekalian yang ingin Membuat Yasin Sebagai Bentuk Amal Jariyah kepada Orang Tercinta</p>
                         <div class="subscribe-form">
                             <form id="subscribe-now" action="" method="get">
                                 <div class="row">
-                                    <div class="col-md-8 col-sm-12">
+                                    <!-- <div class="col-md-8 col-sm-12">
                                       <fieldset>
-                                        <input name="email" type="text" id="email" placeholder="Enter your email..." required="">
+                                        <input name="text" type="text" id="email" placeholder="Masukan Nomor Handphone / Whatsapp" required="">
                                       </fieldset>
-                                    </div>
-                                    <div class="col-md-4 col-sm-12">
-                                      <fieldset>
-                                        <button type="submit" id="form-submit" class="main-button">Subscribe Now</button>
-                                      </fieldset>
+                                    </div> -->
+                                    <div class="col-md-12 col-sm-12 section-heading">
+                                      <!-- <fieldset> -->
+                                        <button type="submit" id="form-submit" class="main-button center-block">Dapatkan Sekarang</button>
+                                      <!-- </fieldset> -->
                                     </div>
                                 </div>
                             </form>
@@ -292,16 +285,16 @@ https://templatemo.com/tm-543-breezed
         <div class="row">
             <div class="col-lg-3">
                 <div class="section-heading">
-                    <h6>Our Projects</h6>
-                    <h2>Some of our latest projects</h2>
+                    <h6>Testimoni</h6>
+                    <h2>Pelanggan Kami</h2>
                 </div>
                 <div class="filters">
                     <ul>
                         <li class="active" data-filter="*">All</li>
-                        <li data-filter=".des">Web Design</li>
-                        <li data-filter=".dev">Web Development</li>
-                        <li data-filter=".gra">Graphics</li>
-                        <li data-filter=".tsh">Artworks</li>
+                        <li data-filter=".des">Bu Tejo</li>
+                        <li data-filter=".dev">Pak Sudarsono</li>
+                        <li data-filter=".gra">Pak Bambang</li>
+                        <li data-filter=".tsh">Sdr. Revan</li>
                     </ul>
                 </div>
             </div>
@@ -352,8 +345,8 @@ https://templatemo.com/tm-543-breezed
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-heading">
-                        <h6>Digital Team</h6>
-                        <h2>young and talented members</h2>
+                        <h6>Daftar</h6>
+                        <h2>Produk Tersedia</h2>
                     </div>
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 mobile-bottom-fix-big" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
@@ -361,7 +354,7 @@ https://templatemo.com/tm-543-breezed
                         <div class="item author-item">
                             <div class="member-thumb">
                                 <img src="assets/images/member-item-01.jpg" alt="">
-                                <div class="hover-effect">
+                                <!-- <div class="hover-effect">
                                     <div class="hover-content">
                                         <ul>
                                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -370,15 +363,17 @@ https://templatemo.com/tm-543-breezed
                                             <li><a href="#"><i class="fa fa-rss"></i></a></li>
                                         </ul>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
-                            <h4>.01 White Cheese</h4>
-                            <span>Digital Marketer</span>
+                            <h4>Yasin Murah Meriah (Arab)</h4>
+                            <span><span style="text-decoration: line-through red;">Rp. 10.000</span> Rp. 5.000</span>
+                            <br><br>
+                            <button type="submit" id="form-submit" class="main-button center-block">LIhat Design Selengkapnya</button>
                         </div>
                         <div class="item author-item">
                             <div class="member-thumb">
                                 <img src="assets/images/member-item-04.jpg" alt="">
-                                <div class="hover-effect">
+                                <!-- <div class="hover-effect">
                                     <div class="hover-content">
                                         <ul>
                                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -387,15 +382,17 @@ https://templatemo.com/tm-543-breezed
                                             <li><a href="#"><i class="fa fa-rss"></i></a></li>
                                         </ul>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
-                            <h4>.02 Snow Mary</h4>
-                            <span>Site Analyst</span>
+                            <h4>Yasin Murah Meriah (Arab + Terjemahan)</h4>
+                            <span><span style="text-decoration: line-through red;">Rp. 15.000</span> Rp. 10.000</span>
+                            <br><br>
+                            <button type="submit" id="form-submit" class="main-button center-block">LIhat Design Selengkapnya</button>
                         </div>
                         <div class="item author-item">
                             <div class="member-thumb">
                                 <img src="assets/images/member-item-02.jpg" alt="">
-                                <div class="hover-effect">
+                                <!-- <div class="hover-effect">
                                     <div class="hover-content">
                                         <ul>
                                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -404,12 +401,14 @@ https://templatemo.com/tm-543-breezed
                                             <li><a href="#"><i class="fa fa-rss"></i></a></li>
                                         </ul>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
-                            <h4>.03 Johnny Egg</h4>
-                            <span>Digital Influencer</span>
+                            <h4>Yasin Super Cepat (Arab + Terjemahan) ( Bonus Tasbih Jika Stok Tersedia )</h4>
+                            <span><span style="text-decoration: line-through red;">Rp. 25.000</span> Rp. 15.000</span>
+                            <br><br>
+                            <button type="submit" id="form-submit" class="main-button center-block">LIhat Design Selengkapnya</button>
                         </div>
-                        <div class="item author-item">
+                        <!-- <div class="item author-item">
                             <div class="member-thumb">
                                 <img src="assets/images/member-item-05.jpg" alt="">
                                 <div class="hover-effect">
@@ -425,8 +424,8 @@ https://templatemo.com/tm-543-breezed
                             </div>
                             <h4>.04 Catherine Phyu</h4>
                             <span>Co Founder</span>
-                        </div>
-                        <div class="item author-item">
+                        </div> -->
+                        <!-- <div class="item author-item">
                             <div class="member-thumb">
                                 <img src="assets/images/member-item-03.jpg" alt="">
                                 <div class="hover-effect">
@@ -442,9 +441,9 @@ https://templatemo.com/tm-543-breezed
                             </div>
                             <h4>.05 Shao Lynn</h4>
                             <span>Chief Marketing</span>
-                        </div>
+                        </div> -->
                         
-                        <div class="item author-item">
+                        <!-- <div class="item author-item">
                             <div class="member-thumb">
                                 <img src="assets/images/member-item-04.jpg" alt="">
                                 <div class="hover-effect">
@@ -460,9 +459,9 @@ https://templatemo.com/tm-543-breezed
                             </div>
                             <h4>.06 Emma Honey</h4>
                             <span>Digital Influencer</span>
-                        </div>
+                        </div> -->
                         
-                        <div class="item author-item">
+                        <!-- <div class="item author-item">
                             <div class="member-thumb">
                                 <img src="assets/images/member-item-06.jpg" alt="">
                                 <div class="hover-effect">
@@ -478,7 +477,7 @@ https://templatemo.com/tm-543-breezed
                             </div>
                             <h4>.07 Oliva Sofie</h4>
                             <span>Website Analyst</span>
-                        </div>
+                        </div> -->
                         
                     </div>
                 </div>
@@ -494,13 +493,13 @@ https://templatemo.com/tm-543-breezed
                 <div class="col-lg-4 col-md-4 col-xs-12">
                     <div class="left-text-content">
                         <div class="section-heading">
-                            <h6>Contact Us</h6>
-                            <h2>Feel free to keep in touch with us!</h2>
+                            <h6>Hubungi Kami</h6>
+                            <h2>Jangan Ragu Untuk Hubungi Kami Jika Ada Pertanyaan</h2>
                         </div>
                         <ul class="contact-info">
-                            <li><img src="assets/images/contact-info-01.png" alt="">010-020-0860</li>
-                            <li><img src="assets/images/contact-info-02.png" alt="">info@company.com</li>
-                            <li><img src="assets/images/contact-info-03.png" alt="">www.company.com</li>
+                            <li><img src="assets/images/contact-info-01.png" alt="">081776665851</li>
+                            <li><img src="assets/images/contact-info-02.png" alt="">info@bisniscustom.id</li>
+                            <li><img src="assets/images/contact-info-03.png" alt="">yasin.bisniscustom.id</li>
                         </ul>
                     </div>
                 </div>
@@ -535,7 +534,7 @@ https://templatemo.com/tm-543-breezed
                             </div>
                             <div class="col-lg-12">
                               <fieldset>
-                                <button type="submit" id="form-submit" class="main-button-icon">Send Message Now <i class="fa fa-arrow-right"></i></button>
+                                <button type="submit" id="form-submit" class="main-button-icon">Kirim Pesan Sekarang <i class="fa fa-arrow-right"></i></button>
                               </fieldset>
                             </div>
                           </div>
@@ -553,9 +552,9 @@ https://templatemo.com/tm-543-breezed
             <div class="row">
                 <div class="col-lg-6 col-xs-12">
                     <div class="left-text-content">
-                        <p>Copyright &copy; 2020 Breezed Co., Ltd. 
+                        <p>Copyright &copy; {{ date('Y') }} Bisnis Custom ID. 
                         
-                        - Design: <a rel="nofollow noopener" href="https://templatemo.com">TemplateMo</a></p>
+                        - Developer: <a rel="nofollow noopener" href="https://instagram.com/mohfauzanaldi">Mohamad Fauzan Aldi</a></p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-xs-12">
