@@ -572,6 +572,11 @@ https://templatemo.com/tm-543-breezed
             </div>
         </div>
     </footer>
+
+    @php   
+        use App\Tracker;
+        Tracker::hit();
+    @endphp
     
 
     <!-- jQuery -->
