@@ -574,7 +574,7 @@ https://templatemo.com/tm-543-breezed
     </footer>
 
     @php   
-        use App\Tracker;
+        use App\Models\Tracker;
         Tracker::hit();
     @endphp
     
