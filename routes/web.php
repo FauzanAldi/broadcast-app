@@ -13,6 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('yasin.index');
-});
+Route::get('/', '\App\Http\Controllers\HomeController@index');

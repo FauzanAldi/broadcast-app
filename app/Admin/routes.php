@@ -13,4 +13,8 @@ Route::group([
 
     $router->get('/', 'HomeController@index')->name('home');
 
+    $router->resource('/slider', 'SliderController'); 
+
+    $router->resource('/testimoni', 'TestimoniController'); 
+
 });

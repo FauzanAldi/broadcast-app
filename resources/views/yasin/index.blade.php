@@ -94,45 +94,20 @@
     <!-- ***** Main Banner Area Start ***** -->
     <div class="main-banner header-text" id="top">
         <div class="Modern-Slider">
+          @foreach($s as $key)
           <!-- Item -->
           <div class="item">
             <div class="img-fill">
-                <img src="assets/images/slide-01.jpg" alt="">
+                <img src="{{ asset('uploads/'.$key->file) }}" alt="">
                 <div class="text-content">
-                  <h3>Welcome To Breezed</h3>
-                  <h5>New Bootstrap Template</h5>
-                  <a href="#" class="main-stroked-button">Learn More</a>
-                  <a href="#" class="main-filled-button">Get It Now</a>
+                  <h3>{{ $key->name }}</h3>
+                  <h5>{{ $key->deskripsi }}</h5>
+                  <a href="#" class="main-stroked-button">Selengkapnya</a>
                 </div>
             </div>
           </div>
           <!-- // Item -->
-          <!-- Item -->
-          <div class="item">
-            <div class="img-fill">
-                <img src="assets/images/slide-02.jpg" alt="">
-                <div class="text-content">
-                  <h3>Integrated Marketing Media</h3>
-                  <h5>Best Digital Marketing</h5>
-                  <a href="#" class="main-stroked-button">Read More</a>
-                  <a href="#" class="main-filled-button">Take Action</a>
-                </div>
-            </div>
-          </div>
-          <!-- // Item -->
-          <!-- Item -->
-          <div class="item">
-            <div class="img-fill">
-                <img src="assets/images/slide-03.jpg" alt="">
-                <div class="text-content">
-                  <h3>High Performance</h3>
-                  <h5>Robust and Speedy</h5>
-                  <a href="#" class="main-stroked-button">Learn More</a>
-                  <a href="#" class="main-filled-button">Get It Now</a>
-                </div>
-            </div>
-          </div>
-          <!-- // Item -->
+          @endforeach
         </div>
     </div>
     <div class="scroll-down scroll-to-section"><a href="#about"><i class="fa fa-arrow-down"></i></a></div>
@@ -291,46 +266,28 @@
                 <div class="filters">
                     <ul>
                         <li class="active" data-filter="*">All</li>
-                        <li data-filter=".des">Bu Tejo</li>
-                        <li data-filter=".dev">Pak Sudarsono</li>
-                        <li data-filter=".gra">Pak Bambang</li>
-                        <li data-filter=".tsh">Sdr. Revan</li>
+                        @foreach($u as $key)
+                            <li data-filter=".key{{ $key->id }}">{{ $key->name }}</li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
             <div class="col-lg-9">
                 <div class="filters-content">
                     <div class="row grid">
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all des">
-                          <div class="item">
-                            <a href="assets/images/project-big-item-01.jpg" data-lightbox="image-1" data-title="Our Projects"><img src="assets/images/project-item-01.jpg" alt=""></a>
-                          </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all dev">
-                          <div class="item">
-                            <a href="assets/images/project-big-item-02.jpg" data-lightbox="image-1" data-title="Our Projects"><img src="assets/images/project-item-02.jpg" alt=""></a>
-                          </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all gra">
-                          <div class="item">
-                            <a href="assets/images/project-big-item-03.jpg" data-lightbox="image-1" data-title="Our Projects"><img src="assets/images/project-item-03.jpg" alt=""></a>
-                          </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all tsh">
-                          <div class="item">
-                            <a href="assets/images/project-big-item-04.jpg" data-lightbox="image-1" data-title="Our Projects"><img src="assets/images/project-item-04.jpg" alt=""></a>
-                          </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all dev">
-                          <div class="item">
-                            <a href="assets/images/project-big-item-05.jpg" data-lightbox="image-1" data-title="Our Projects"><img src="assets/images/project-item-05.jpg" alt=""></a>
-                          </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all des">
-                          <div class="item">
-                            <a href="assets/images/project-big-item-06.jpg" data-lightbox="image-1" data-title="Our Projects"><img src="assets/images/project-item-06.jpg" alt=""></a>
-                          </div>
-                        </div>
+                        @foreach($u as $key)
+
+                            @foreach($key->testimoni as $key2)
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all key{{ $key->id }}">
+                                <div class="item">
+                                    <a href="{{ asset('uploads/'.$key2->file) }}" data-lightbox="image-1" data-title="Our Projects"><img src="{{ asset('uploads/'.$key2->file) }}" alt=""></a>
+                                </div>
+                            </div>
+                            @endforeach
+
+                        @endforeach
+                        
+                        
                     </div>
                 </div>
             </div>
