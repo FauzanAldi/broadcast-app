@@ -14,3 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', '\App\Http\Controllers\HomeController@index');
+
+Route::post('/contact', '\App\Http\Controllers\ContactController@store')->name('contact.store');
+
+Route::post('/subscribe', '\App\Http\Controllers\SubscriberController@store')->name('subscribe.store');
+
+Route::get('/products/{id}', '\App\Http\Controllers\ProductController@detail')->name('product.detail');

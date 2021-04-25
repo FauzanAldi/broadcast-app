@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Slider;
 use App\Models\Testimoni;
 use App\Models\User;
+use App\Models\Product;
 use Illuminate\Support\Facades\DB;  
 use Illuminate\Http\Request;
 use Auth;
@@ -19,7 +20,8 @@ class HomeController extends BaseController
         return view('yasin.index',[
             's'=>Slider::all(),
             't'=>Testimoni::all(),
-            'u'=>User::has('testimoni')->get()
+            'u'=>User::has('testimoni')->get(),
+            'p'=>Product::all()
             
             ]);
 

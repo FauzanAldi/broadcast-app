@@ -17,4 +17,6 @@ Route::group([
 
     $router->resource('/testimoni', 'TestimoniController'); 
 
+    $router->resource('/product', 'ProductController'); 
+
 });

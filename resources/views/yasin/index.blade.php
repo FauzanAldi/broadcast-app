@@ -1,97 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('yasin.layouts')
 
-  <head>
+@section('content')
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-
-    <title>Yasin Murah ID</title>
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
-
-    <link rel="stylesheet" href="assets/css/templatemo-breezed.css">
-
-    <link rel="stylesheet" href="assets/css/owl-carousel.css">
-
-    <link rel="stylesheet" href="assets/css/lightbox.css">
-
-    </head>
-    
-    <body>
-    
-    <!-- ***** Preloader Start ***** -->
-    <div id="preloader">
-        <div class="jumper">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>  
-    <!-- ***** Preloader End ***** -->
-    
-    
-    <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
-                            YASIN MURAH ID
-                        </a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
-                            <li class="scroll-to-section"><a href="#top" class="active">Beranda</a></li>
-                            <li class="scroll-to-section"><a href="#about">Tentang Kami</a></li>
-                            <li class="scroll-to-section"><a href="#projects">Produk</a></li>
-                            <!-- <li class="submenu">
-                                <a href="javascript:;">Drop Down</a>
-                                <ul>
-                                    <li><a href="">About Us</a></li>
-                                    <li><a href="">Features</a></li>
-                                    <li><a href="">FAQ's</a></li>
-                                    <li><a href="">Blog</a></li>
-                                </ul>
-                            </li> -->
-                            <li class="scroll-to-section"><a href="#contact-us">Kontak Kami</a></li> 
-                            <div class="search-icon">
-                                <a href="#search"><i class="fa fa-search"></i></a>
-                            </div>
-                        </ul>        
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
-                        <!-- ***** Menu End ***** -->
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- ***** Header Area End ***** -->
-    
-    <!-- ***** Search Area ***** -->
-    <div id="search">
-        <button type="button" class="close">×</button>
-        <form id="contact" action="#" method="get">
-            <fieldset>
-                <input type="search" name="q" placeholder="SEARCH KEYWORD(s)" aria-label="Search through site content">
-            </fieldset>
-            <fieldset>
-                <button type="submit" class="main-button">Search</button>
-            </fieldset>
-        </form>
-    </div>
-
-    <!-- ***** Main Banner Area Start ***** -->
     <div class="main-banner header-text" id="top">
         <div class="Modern-Slider">
           @foreach($s as $key)
@@ -102,7 +12,7 @@
                 <div class="text-content">
                   <h3>{{ $key->name }}</h3>
                   <h5>{{ $key->deskripsi }}</h5>
-                  <a href="#" class="main-stroked-button">Selengkapnya</a>
+                  {{-- <a href="#" class="main-stroked-button">Selengkapnya</a> --}}
                 </div>
             </div>
           </div>
@@ -149,7 +59,7 @@
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <a href="#" class="main-button-icon">
+                                <a href="#testimonials" class="main-button-icon">
                                     Pesan Sekarang <i class="fa fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -166,6 +76,9 @@
             </div>
         </div>
     </section>
+
+    <!-- Button trigger modal -->
+
     <!-- ***** About Area Ends ***** -->
 
     <!-- ***** Features Big Item Start ***** -->
@@ -240,7 +153,7 @@
                                     </div> -->
                                     <div class="col-md-12 col-sm-12 section-heading">
                                       <!-- <fieldset> -->
-                                        <button type="submit" id="form-submit" class="main-button center-block">Dapatkan Sekarang</button>
+                                        <button type="button" data-toggle="modal" data-target="#exampleModalLong" class="main-button center-block">Dapatkan Sekarang</button>
                                       <!-- </fieldset> -->
                                     </div>
                                 </div>
@@ -308,133 +221,28 @@
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 mobile-bottom-fix-big" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
                     <div class="owl-carousel owl-theme">
+                        @foreach($p as $key)
                         <div class="item author-item">
                             <div class="member-thumb">
-                                <img src="assets/images/member-item-01.jpg" alt="">
-                                <!-- <div class="hover-effect">
-                                    <div class="hover-content">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div> -->
+                                @if(strpos($key->file, 'mp4') !== false)
+            
+                                    <video style="width: 100%; max-height: 500px;" controls="true">
+                                        <source src="{{ asset('uploads/'.$key->file) }}" type="video/mp4">
+                                    </video>
+
+                                @else
+                                <a href="{{ asset('uploads/'.$key->file) }}" data-lightbox="image-1" data-title="File Utama">
+                                    <img src="{{ asset('uploads/'.$key->file) }}" class="img-fluid" alt="">
+                                </a>
+
+                                @endif
                             </div>
-                            <h4>Yasin Murah Meriah (Arab)</h4>
-                            <span><span style="text-decoration: line-through red;">Rp. 10.000</span> Rp. 5.000</span>
+                            <h4>{{ $key->name }}</h4>
+                            <span><span style="text-decoration: line-through red;">Rp. {{ $key->price }}</span> Rp. {{ $key->diskon }}</span>
                             <br><br>
-                            <button type="submit" id="form-submit" class="main-button center-block">LIhat Design Selengkapnya</button>
+                            <a href="{{ route('product.detail',$key->id) }}" type="submit" id="form-submit" class="btn btn-info center-block">LIhat Selengkapnya</a>
                         </div>
-                        <div class="item author-item">
-                            <div class="member-thumb">
-                                <img src="assets/images/member-item-04.jpg" alt="">
-                                <!-- <div class="hover-effect">
-                                    <div class="hover-content">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div> -->
-                            </div>
-                            <h4>Yasin Murah Meriah (Arab + Terjemahan)</h4>
-                            <span><span style="text-decoration: line-through red;">Rp. 15.000</span> Rp. 10.000</span>
-                            <br><br>
-                            <button type="submit" id="form-submit" class="main-button center-block">LIhat Design Selengkapnya</button>
-                        </div>
-                        <div class="item author-item">
-                            <div class="member-thumb">
-                                <img src="assets/images/member-item-02.jpg" alt="">
-                                <!-- <div class="hover-effect">
-                                    <div class="hover-content">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div> -->
-                            </div>
-                            <h4>Yasin Super Cepat (Arab + Terjemahan) ( Bonus Tasbih Jika Stok Tersedia )</h4>
-                            <span><span style="text-decoration: line-through red;">Rp. 25.000</span> Rp. 15.000</span>
-                            <br><br>
-                            <button type="submit" id="form-submit" class="main-button center-block">LIhat Design Selengkapnya</button>
-                        </div>
-                        <!-- <div class="item author-item">
-                            <div class="member-thumb">
-                                <img src="assets/images/member-item-05.jpg" alt="">
-                                <div class="hover-effect">
-                                    <div class="hover-content">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4>.04 Catherine Phyu</h4>
-                            <span>Co Founder</span>
-                        </div> -->
-                        <!-- <div class="item author-item">
-                            <div class="member-thumb">
-                                <img src="assets/images/member-item-03.jpg" alt="">
-                                <div class="hover-effect">
-                                    <div class="hover-content">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4>.05 Shao Lynn</h4>
-                            <span>Chief Marketing</span>
-                        </div> -->
-                        
-                        <!-- <div class="item author-item">
-                            <div class="member-thumb">
-                                <img src="assets/images/member-item-04.jpg" alt="">
-                                <div class="hover-effect">
-                                    <div class="hover-content">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4>.06 Emma Honey</h4>
-                            <span>Digital Influencer</span>
-                        </div> -->
-                        
-                        <!-- <div class="item author-item">
-                            <div class="member-thumb">
-                                <img src="assets/images/member-item-06.jpg" alt="">
-                                <div class="hover-effect">
-                                    <div class="hover-content">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4>.07 Oliva Sofie</h4>
-                            <span>Website Analyst</span>
-                        </div> -->
+                        @endforeach
                         
                     </div>
                 </div>
@@ -462,36 +270,32 @@
                 </div>
                 <div class="col-lg-8 col-md-8 col-xs-12">
                     <div class="contact-form">
-                        <form id="contact" action="" method="get">
+                        <form action="{{ route('contact.store') }}" method="post">
+                            @csrf
                           <div class="row">
                             <div class="col-md-6 col-sm-12">
                               <fieldset>
-                                <input name="name" type="text" id="name" placeholder="Your Name *" required="">
+                                <input name="nama" type="text" id="name" placeholder="Nama">
                               </fieldset>
                             </div>
                             <div class="col-md-6 col-sm-12">
                               <fieldset>
-                                <input name="phone" type="text" id="phone" placeholder="Your Phone" required="">
+                                <input name="whatsapp" type="text" id="phone" placeholder="Whatsapp">
                               </fieldset>
                             </div>
-                            <div class="col-md-6 col-sm-12">
+                            <div class="col-md-12 col-sm-12">
                               <fieldset>
-                                <input name="email" type="email" id="email" placeholder="Your Email *" required="">
-                              </fieldset>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                              <fieldset>
-                                <input name="subject" type="text" id="subject" placeholder="Subject">
+                                <input name="email" type="email" id="email" placeholder="Email">
                               </fieldset>
                             </div>
                             <div class="col-lg-12">
                               <fieldset>
-                                <textarea name="message" rows="6" id="message" placeholder="Message" required=""></textarea>
+                                <textarea name="pesan" rows="6" id="message" placeholder="Pesan"></textarea>
                               </fieldset>
                             </div>
                             <div class="col-lg-12">
                               <fieldset>
-                                <button type="submit" id="form-submit" class="main-button-icon">Kirim Pesan Sekarang <i class="fa fa-arrow-right"></i></button>
+                                <button type="submit" class="main-button-icon">Kirim Pesan Sekarang <i class="fa fa-arrow-right"></i></button>
                               </fieldset>
                             </div>
                           </div>
@@ -501,77 +305,50 @@
             </div>
         </div>
     </section>
-    <!-- ***** Contact Us Area Ends ***** -->
-    
-    <!-- ***** Footer Start ***** -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-xs-12">
-                    <div class="left-text-content">
-                        <p>Copyright &copy; {{ date('Y') }} Bisnis Custom ID. 
-                        
-                        - Developer: <a rel="nofollow noopener" href="https://instagram.com/mohfauzanaldi">Mohamad Fauzan Aldi</a></p>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-xs-12">
-                    <div class="right-text-content">
-                            <ul class="social-icons">
-                                <li><p>Follow Us</p></li>
-                                <li><a rel="nofollow" href="https://fb.com/templatemo"><i class="fa fa-facebook"></i></a></li>
-                                <li><a rel="nofollow" href="https://fb.com/templatemo"><i class="fa fa-twitter"></i></a></li>
-                                <li><a rel="nofollow" href="https://fb.com/templatemo"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a rel="nofollow" href="https://fb.com/templatemo"><i class="fa fa-dribbble"></i></a></li>
-                            </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
 
-    @php   
-        use App\Models\Tracker;
-        Tracker::hit();
-    @endphp
-    
 
-    <!-- jQuery -->
-    <script src="assets/js/jquery-2.1.0.min.js"></script>
 
-    <!-- Bootstrap -->
-    <script src="assets/js/popper.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+@endsection
 
-    <!-- Plugins -->
-    <script src="assets/js/owl-carousel.js"></script>
-    <script src="assets/js/scrollreveal.min.js"></script>
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/imgfix.min.js"></script> 
-    <script src="assets/js/slick.js"></script> 
-    <script src="assets/js/lightbox.js"></script> 
-    <script src="assets/js/isotope.js"></script> 
-    
-    <!-- Global Init -->
-    <script src="assets/js/custom.js"></script>
 
-    <script>
+@section('modal')
 
-        $(function() {
-            var selectedClass = "";
-            $("p").click(function(){
-            selectedClass = $(this).attr("data-rel");
-            $("#portfolio").fadeTo(50, 0.1);
-                $("#portfolio div").not("."+selectedClass).fadeOut();
-            setTimeout(function() {
-              $("."+selectedClass).fadeIn();
-              $("#portfolio").fadeTo(50, 1);
-            }, 500);
-                
-            });
-        });
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <form action="{{ route('subscribe.store') }}" method="post">
+            @csrf
+      {{-- <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div> --}}
+          <div class="modal-body">
+            
+              <div class="form-group">
+                <label for="exampleInputEmail1">Nama</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukan Nama" name="nama">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukan Email" name="email">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">No Whatsapp</label>
+                <input type="text" class="form-control" placeholder="Masukan No Whatsapp" name="whatsapp">
+              </div>
+              
+            
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-success">Dapatkan Sekarang</button>
+            {{-- <button type="button" class="btn btn-primary">Save changes</button> --}}
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
 
-    </script>
-
-  </body>
-</html>
+@endsection
