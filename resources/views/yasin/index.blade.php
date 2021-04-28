@@ -59,7 +59,7 @@
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <a href="#testimonials" class="main-button-icon">
+                                <a href="#testimonials" class="main-button-icon" onclick="AddHits(2)">
                                     Pesan Sekarang <i class="fa fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -153,7 +153,7 @@
                                     </div> -->
                                     <div class="col-md-12 col-sm-12 section-heading">
                                       <!-- <fieldset> -->
-                                        <button type="button" data-toggle="modal" data-target="#exampleModalLong" class="main-button center-block">Dapatkan Sekarang</button>
+                                        <button onclick="AddHits(3)" type="button" data-toggle="modal" data-target="#exampleModalLong" class="main-button center-block">Dapatkan Sekarang</button>
                                       <!-- </fieldset> -->
                                     </div>
                                 </div>
@@ -352,3 +352,8 @@
 </div>
 
 @endsection
+
+@php   
+        use App\Models\Tracker;
+        Tracker::hits(1);
+    @endphp

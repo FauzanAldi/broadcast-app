@@ -9,7 +9,7 @@ class Tracker extends Model
 {
     // public $attributes = [ 'hits' => 0 ];
 
-    protected $fillable = [ 'ip'];
+    protected $fillable = [ 'ip','category_id','ket'];
     protected $table = 'tracker';
 
     // public static function boot() {
@@ -23,6 +23,15 @@ class Tracker extends Model
     public static function hit() {
         static::Create([
                   'ip'   => $_SERVER['REMOTE_ADDR'],
+                  // 'date' => date('Y-m-d'),
+              ])->save();
+    }
+
+    public static function hits($category_id,$ket=null) {
+        static::Create([
+                  'ip'   => $_SERVER['REMOTE_ADDR'],
+                  'category_id' => $category_id,
+                  'ket' => $ket
                   // 'date' => date('Y-m-d'),
               ])->save();
     }

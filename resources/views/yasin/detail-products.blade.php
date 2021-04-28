@@ -58,8 +58,8 @@
             <br>
             <form class="d-flex justify-content-left">
               <!-- Default input -->
-              <input type="number" value="1" aria-label="Search" class="form-control" style="width: 100px">
-              <button class="btn btn-primary btn-md my-0 p" type="submit">Beli
+              <input type="number" id="qty" value="1" aria-label="Search" class="form-control" style="width: 100px">
+              <button onclick="AddHits(5,{{ $p->id }})" type="button" id="buy" data-toggle="modal" data-target="#exampleModalLong" class="btn btn-primary btn-md my-0 p" type="submit">Beli
               </button>
 
             </form>
@@ -141,7 +141,7 @@
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-        <form action="{{ route('subscribe.store') }}" method="post">
+        <form action="{{ route('product.buy') }}" method="post" target="_blank">
             @csrf
       {{-- <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
@@ -166,12 +166,13 @@
 
               <div class="form-group">
                 <label for="exampleInputEmail1">Produk</label>
-                <input type="text" name="">
+                <input type="text" name="product" class="form-control" value="{{ $p->name }}" disabled>
+                <input type="hidden" name="products_id" value="{{ $p->id }}">
               </div>
 
               <div class="form-group">
-                <label for="exampleInputEmail1">No Whatsapp</label>
-                <input type="text" class="form-control" placeholder="Masukan No Whatsapp" name="whatsapp">
+                <label for="exampleInputEmail1">Jumlah</label>
+                <input type="number" id="qty_form" class="form-control" name="qty">
               </div>
               
             
@@ -186,3 +187,25 @@
 </div>
 
 @endsection
+
+@section('js')
+
+  <script type="text/javascript">
+      
+      $("#buy").click(function(){
+
+        qty=$("#qty").val();
+
+        $("#qty_form").val(qty);
+
+
+      })
+
+  </script>
+
+@endsection
+
+@php   
+        use App\Models\Tracker;
+        Tracker::hits(4,$p->id);
+    @endphp

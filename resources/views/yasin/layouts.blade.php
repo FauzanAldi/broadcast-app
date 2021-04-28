@@ -50,9 +50,9 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li class="scroll-to-section"><a href="#top" class="active">Beranda</a></li>
-                            <li class="scroll-to-section"><a href="#about">Tentang Kami</a></li>
-                            <li class="scroll-to-section"><a href="#testimonials">Produk</a></li>
+                            <li class="scroll-to-section"><a href="{{ url('') }}#top" class="active">Beranda</a></li>
+                            <li class="scroll-to-section"><a href="{{ url('') }}#about">Tentang Kami</a></li>
+                            <li class="scroll-to-section"><a href="{{ url('') }}#testimonials">Produk</a></li>
                             <!-- <li class="submenu">
                                 <a href="javascript:;">Drop Down</a>
                                 <ul>
@@ -62,7 +62,7 @@
                                     <li><a href="">Blog</a></li>
                                 </ul>
                             </li> -->
-                            <li class="scroll-to-section"><a href="#contact-us">Kontak Kami</a></li> 
+                            <li class="scroll-to-section"><a href="{{ url('') }}#contact-us">Kontak Kami</a></li> 
                             <div class="search-icon">
                                 <a href="#search"><i class="fa fa-search"></i></a>
                             </div>
@@ -121,10 +121,7 @@
         </div>
     </footer>
 
-    @php   
-        use App\Models\Tracker;
-        Tracker::hit();
-    @endphp
+    
 
     @yield('modal')
 
@@ -193,6 +190,30 @@
         });
 
     </script>
+
+    <script type="text/javascript">
+        
+        function AddHits(category_id,ket){
+
+            $.ajax(
+                {
+                    url: "{{ route('tracking.hits') }}", 
+                    method : 'POST',
+                    data : {
+                        '_token' : '{{ csrf_token() }}',
+                        'category_id' : category_id,
+                        'ket' : ket
+                    },
+                    success: function(){
+                        console.log('Sukses');
+                    }
+                });
+
+        }
+
+    </script>
+
+    @yield('js')
 
   </body>
 </html>

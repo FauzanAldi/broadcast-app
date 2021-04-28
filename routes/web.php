@@ -20,3 +20,7 @@ Route::post('/contact', '\App\Http\Controllers\ContactController@store')->name('
 Route::post('/subscribe', '\App\Http\Controllers\SubscriberController@store')->name('subscribe.store');
 
 Route::get('/products/{id}', '\App\Http\Controllers\ProductController@detail')->name('product.detail');
+
+Route::post('/products/buy', '\App\Http\Controllers\ProductController@buy')->name('product.buy');
+
+Route::post('/tracking/hits', '\App\Http\Controllers\TrackingController@hits')->name('tracking.hits');
