@@ -45,9 +45,9 @@ class BroadcastBPPTIK extends Command
         //     $BPPTIK_User=BPPTIK_User::where('id',$key->id)->first();
         //     $BPPTIK_User->notify(new BroadcastReminderWorkshop($BPPTIK_User));
         // }
-        // $data=BPPTIK_User::orderBy('id','desc')->where('id',126744)->get();
-        $current_queue=BPPTIK_Queue::orderBy('id','desc')->firstOrFail();
-        $data=BPPTIK_User::where('id','>',$current_queue->users_id)->limit(50)->orderBy('id','asc')->get();
+        $data=BPPTIK_User::orderBy('id','desc')->where('id',44)->get();
+        // $current_queue=BPPTIK_Queue::orderBy('id','desc')->firstOrFail();
+        // $data=BPPTIK_User::where('id','>',$current_queue->users_id)->limit(50)->orderBy('id','asc')->get();
         // dd($data);
         $no=1;
         foreach ($data as $key ) {
@@ -61,7 +61,7 @@ class BroadcastBPPTIK extends Command
                 $this->output->write($no.' '.$key->id .' <--> '. $key->email .' skippp not validd ',true);
             }
 
-            if($key->id!=126744){
+            if($key->id!=44){
                 $queue=new BPPTIK_Queue();
                 $queue->users_id=$key->id;
                 $queue->save();
