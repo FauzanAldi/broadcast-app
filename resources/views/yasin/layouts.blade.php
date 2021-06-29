@@ -5,11 +5,12 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
+    <meta name="description" content="Cetak Buku Yasin Murah, Harga Mulai 5 Ribu, Proses Hanya 2 Hari, PILIHAN DESIGN BANYAK, Gratis Ongkir ke Jabodetabek dan Minimal Order Hanya 10 Pcs">
     <meta name="author" content="">
+    <meta content='cetak yasin, buku yasin, cetak buku yasin, yasin murah, cetak yasin cepat' name='keywords'/>
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>Yasin Murah ID</title>
+    <title>Cetak Buku Yasin Harga 5 Ribu dan Proses Hanya 2 Hari !!</title>
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
@@ -45,7 +46,7 @@
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="{{ url('') }}" class="logo">
-                            YASIN MURAH ID
+                            BUKU YASIN ID
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -79,7 +80,7 @@
     <!-- ***** Header Area End ***** -->
     
     <!-- ***** Search Area ***** -->
-    <div id="search">
+    {{-- <div id="search">
         <button type="button" class="close">×</button>
         <form id="contact" action="#" method="get">
             <fieldset>
@@ -89,7 +90,7 @@
                 <button type="submit" class="main-button">Search</button>
             </fieldset>
         </form>
-    </div>
+    </div> --}}
 
     <!-- ***** Main Banner Area Start ***** -->
     @yield('content')
