@@ -25,7 +25,7 @@ Route::post('/products/buy', '\App\Http\Controllers\ProductController@buy')->nam
 
 Route::post('/tracking/hits', '\App\Http\Controllers\TrackingController@hits')->name('tracking.hits');
 
-Route::get('/sitemap.xml', '\App\Http\Controllers\SitemapController@index');
+// Route::get('/sitemap.xml', '\App\Http\Controllers\SitemapController@index');
 
 Route::get('/updateapp', function()
 {
