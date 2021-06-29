@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="main-banner header-text" id="top">
+    {{-- <div class="main-banner header-text" id="top">
         <div class="Modern-Slider">
           @foreach($s as $key)
           <!-- Item -->
@@ -10,9 +10,9 @@
             <div class="img-fill">
                 <img src="{{ asset('uploads/'.$key->file) }}" alt="">
                 <div class="text-content">
-                  <h3>{{ $key->name }}</h3>
-                  <h5>{{ $key->deskripsi }}</h5>
-                  {{-- <a href="#" class="main-stroked-button">Selengkapnya</a> --}}
+                  <h3 style="color: black">{{ $key->name }}</h3>
+                  <h5 style="color: black">{{ $key->deskripsi }}</h5>
+                  <a href="#" class="main-stroked-button">Selengkapnya</a>
                 </div>
             </div>
           </div>
@@ -20,7 +20,7 @@
           @endforeach
         </div>
     </div>
-    <div class="scroll-down scroll-to-section"><a href="#about"><i class="fa fa-arrow-down"></i></a></div>
+    <div class="scroll-down scroll-to-section"><a href="#about"><i class="fa fa-arrow-down"></i></a></div> --}}
     <!-- ***** Main Banner Area End ***** -->
 
     <!-- ***** About Area Starts ***** -->
@@ -30,7 +30,7 @@
                 <div class="col-lg-6 col-md-6 col-xs-12">
                     <div class="left-text-content">
                         <div class="section-heading">
-                            <h6>Tentang Kami</h6>
+                            {{-- <h6>Tentang Kami</h6> --}}
                             <h2>Kenapa Pesan di YasinMurah ID ?</h2>
                         </div>
                         <div class="row">
@@ -76,6 +76,8 @@
             </div>
         </div>
     </section>
+
+    <div class="scroll-down scroll-to-section"><a href="#features"><i class="fa fa-arrow-down"></i></a></div>
 
     <!-- Button trigger modal -->
 
@@ -168,9 +170,9 @@
 
 
     <!-- ***** Projects Area Starts ***** -->
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="row">
+    <section class="section" id="projects" style="height: 1300px;">
+      <div class="container" >
+        <div class="row" >
             <div class="col-lg-3">
                 <div class="section-heading">
                     <h6>Testimoni</h6>
@@ -185,16 +187,26 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-9">
-                <div class="filters-content">
-                    <div class="row grid">
+            <div class="col-lg-9" style="height: 100%;">
+                <div class="filters-content" style="height: auto;">
+                    <div class="row grid" >
                         @foreach($u as $key)
 
                             @foreach($key->testimoni as $key2)
                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all key{{ $key->id }}">
+                                
+                                @if(strpos($key2->file, 'mp4') !== false)
+                                <div class="item">
+                                    <video style="width: 100%; max-height: 700px; position: relative; " controls="">
+                                        <source src="{{ asset('uploads/'.$key2->file) }}" type="video/mp4">
+                                    </video>
+                                </div>
+                                @else
                                 <div class="item">
                                     <a href="{{ asset('uploads/'.$key2->file) }}" data-lightbox="image-1" data-title="Our Projects"><img src="{{ asset('uploads/'.$key2->file) }}" alt=""></a>
                                 </div>
+
+                                @endif
                             </div>
                             @endforeach
 

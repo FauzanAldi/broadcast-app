@@ -44,14 +44,14 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
+                        <a href="{{ url('') }}" class="logo">
                             YASIN MURAH ID
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="{{ url('') }}#top" class="active">Beranda</a></li>
-                            <li class="scroll-to-section"><a href="{{ url('') }}#about">Tentang Kami</a></li>
+                            <li class="scroll-to-section"><a href="{{ url('') }}#projects">Testimoni</a></li>
                             <li class="scroll-to-section"><a href="{{ url('') }}#testimonials">Produk</a></li>
                             <!-- <li class="submenu">
                                 <a href="javascript:;">Drop Down</a>
@@ -164,7 +164,7 @@
     <script src="{{ asset('assets/js/owl-carousel.js') }}"></script>
     <script src="{{ asset('assets/js/scrollreveal.min.js') }}"></script>
     <script src="{{ asset('assets/js/waypoints.min.js') }}"></script>
-    <script src="{{ asset('assets/js/jquery.counterup.min.js') }}"></script>
+    {{-- <script src="{{ asset('assets/js/jquery.counterup.min.js') }}"></script> --}}
     <script src="{{ asset('assets/js/imgfix.min.js') }}"></script> 
     <script src="{{ asset('assets/js/slick.js') }}"></script> 
     <script src="{{ asset('assets/js/lightbox.js') }}"></script> 
