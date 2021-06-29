@@ -24,3 +24,5 @@ Route::get('/products/{id}', '\App\Http\Controllers\ProductController@detail')->
 Route::post('/products/buy', '\App\Http\Controllers\ProductController@buy')->name('product.buy');
 
 Route::post('/tracking/hits', '\App\Http\Controllers\TrackingController@hits')->name('tracking.hits');
+
+Route::get('/sitemap.xml', '\App\Http\Controllers\SitemapController@index');

@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '85e4c4008b4aec6b9d66518ca59da7e92ba5f8b9',
+    'reference' => '6327b4431a24ccb412ace72d7d1e25f02c7ce58c',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -474,6 +474,15 @@
         0 => '*',
       ),
     ),
+    'laravel-admin-ext/summernote' => 
+    array (
+      'pretty_version' => 'v1.0.1',
+      'version' => '1.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '1193b17ccd70e52854cc25f80964c177cd5c35f9',
+    ),
     'laravel/framework' => 
     array (
       'pretty_version' => 'v8.22.1',
@@ -490,7 +499,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '85e4c4008b4aec6b9d66518ca59da7e92ba5f8b9',
+      'reference' => '6327b4431a24ccb412ace72d7d1e25f02c7ce58c',
     ),
     'laravel/sail' => 
     array (
@@ -1315,6 +1324,15 @@
       array (
       ),
       'reference' => '80953678b19901e5165c56752d087fc11526017c',
+    ),
+    'watson/sitemap' => 
+    array (
+      'pretty_version' => '4.0.1',
+      'version' => '4.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '9535ae419dd822661d79fb1fcbb8dcfafb777fdc',
     ),
     'webmozart/assert' => 
     array (
