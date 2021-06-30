@@ -19,4 +19,6 @@ Route::group([
 
     $router->resource('/product', 'ProductController'); 
 
+    $router->resource('/user', 'UserController'); 
+
 });
