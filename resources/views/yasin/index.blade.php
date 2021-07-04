@@ -219,7 +219,7 @@
                                         </div>
                                     </div>
                                 {{-- @endif --}}
-                            </div>
+                            {{-- </div> --}}
                             @endforeach
 
                         @endforeach
