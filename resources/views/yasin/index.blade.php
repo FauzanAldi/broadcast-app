@@ -170,7 +170,7 @@
 
 
     <!-- ***** Projects Area Starts ***** -->
-    <section class="section" id="projects" style="height: 1300px;">
+    <section class="section" id="projects" style="height: 100%;">
       <div class="container" >
         <div class="row" >
             <div class="col-lg-3">
