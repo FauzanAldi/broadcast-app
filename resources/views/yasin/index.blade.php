@@ -197,7 +197,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-9" style="height: 100%;">
+            <div class="col-lg-9">
                 
                 <div class="row wow fadeIn">
                     @php
