@@ -203,7 +203,7 @@
                         @foreach($u as $key)
 
                             @foreach($key->testimoni as $key2)
-                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all key{{ $key->id }}">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 key{{ $key->id }}">
                                 
                                 @if(strpos($key2->file, 'mp4') !== false)
                                 <div class="item">
