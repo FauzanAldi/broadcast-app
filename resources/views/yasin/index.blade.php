@@ -198,35 +198,7 @@
                 </div>
             </div>
             <div class="col-lg-9" style="height: 100%;">
-                <div class="filters-content" style="height: auto;">
-                    <div class="row grid" >
-                        @foreach($u as $key)
-
-                            @foreach($key->testimoni as $key2)
-                                {{-- @if(strpos($key2->file, 'mp4') !== false)
-                                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 key{{ $key->id }}">
-                                        <div class="item">
-                                            <video style="width: 100%; max-height: 700px; position: relative; " controls="">
-                                                <source src="{{ asset('uploads/'.$key2->file) }}" type="video/mp4">
-                                            </video>
-                                        </div>
-                                    </div>
-                                
-                                @else --}}
-                                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 key{{ $key->id }}">
-                                        <div class="item">
-                                            <a href="{{ asset('uploads/'.$key2->file) }}" data-lightbox="image-1" data-title="Our Projects"><img src="{{ asset('uploads/'.$key2->file) }}" alt=""></a>
-                                        </div>
-                                    </div>
-                                {{-- @endif --}}
-                            
-                            @endforeach
-
-                        @endforeach
-                        
-                        
-                    </div>
-                </div>
+                
                 <div class="row wow fadeIn">
                     @php
                             $no=1;
