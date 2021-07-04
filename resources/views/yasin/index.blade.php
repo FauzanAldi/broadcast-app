@@ -256,6 +256,7 @@
                             @endforeach
                         @endif
                         @php
+                            {{ $no }}
                             $no++;
                         @endphp
                     @endforeach
