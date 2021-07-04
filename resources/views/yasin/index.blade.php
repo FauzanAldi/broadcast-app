@@ -204,7 +204,11 @@
                             $no=1;
                     @endphp
                     @foreach($u as $key)
-                        @if ($no==1)
+                        @if ($no>1)
+                            @php
+                                break;
+                            @endphp
+                        @endif
                             
                             @foreach($key->testimoni as $key2)
             
@@ -226,8 +230,8 @@
                             </div>
                             
                             @endforeach
-                        @endif
-                        {{ $no }}
+                        
+                        {{-- {{ $no }} --}}
                         @php
                             
                             $no++;
