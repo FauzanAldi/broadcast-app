@@ -255,8 +255,9 @@
                             
                             @endforeach
                         @endif
+                        {{ $no }}
                         @php
-                            {{ $no }}
+                            
                             $no++;
                         @endphp
                     @endforeach
