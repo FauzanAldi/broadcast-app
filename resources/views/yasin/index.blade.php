@@ -180,9 +180,19 @@
                 </div>
                 <div class="filters">
                     <ul>
-                        <li class="active" data-filter="*">All</li>
+                        {{-- <li class="active" data-filter="*">All</li> --}}
+                        @php
+                            $no=1;
+                        @endphp
                         @foreach($u as $key)
-                            <li data-filter=".key{{ $key->id }}">{{ $key->name }}</li>
+                            @if($no==1)
+                                <li class="active" data-filter=".key{{ $key->id }}">{{ $key->name }}</li>
+                            @else
+                                <li data-filter=".key{{ $key->id }}">{{ $key->name }}</li>
+                            @endif
+                            @php
+                                $no++;
+                            @endphp
                         @endforeach
                     </ul>
                 </div>
