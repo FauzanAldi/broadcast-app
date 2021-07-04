@@ -207,9 +207,9 @@
                                 
                                 @if(strpos($key2->file, 'mp4') !== false)
                                 <div class="item">
-                                    <video style="width: 100%; max-height: 700px; position: relative; " controls="">
+                                    {{-- <video style="width: 100%; max-height: 700px; position: relative; " controls="">
                                         <source src="{{ asset('uploads/'.$key2->file) }}" type="video/mp4">
-                                    </video>
+                                    </video> --}}
                                 </div>
                                 @else
                                 <div class="item">
