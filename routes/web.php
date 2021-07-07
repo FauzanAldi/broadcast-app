@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', '\App\Http\Controllers\HomeController@index');
 
-// Route::get('/{seotitle}', '\App\Http\Controllers\HomeController@regencies');
+Route::get('/{seotitle}', '\App\Http\Controllers\HomeController@regencies');
 
 Route::post('/contact', '\App\Http\Controllers\ContactController@store')->name('contact.store');
 
