@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', '\App\Http\Controllers\HomeController@index');
 
+// Route::get('/{seotitle}', '\App\Http\Controllers\HomeController@regencies');
+
 Route::post('/contact', '\App\Http\Controllers\ContactController@store')->name('contact.store');
 
 
@@ -29,7 +31,7 @@ Route::post('/tracking/hits', '\App\Http\Controllers\TrackingController@hits')->
 Route::post('/testimoni/{id}', '\App\Http\Controllers\HomeController@getTestimoni')->name('testimoni.get');
 
 
-// Route::get('/sitemap.xml', '\App\Http\Controllers\SitemapController@index');
+Route::get('/aaa', '\App\Http\Controllers\SitemapController@index');
 
 Route::get('/updateapp', function()
 {

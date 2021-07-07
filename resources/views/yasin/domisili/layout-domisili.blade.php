@@ -5,12 +5,12 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Cetak Buku Yasin Murah, Harga Mulai 5 Ribu, Proses Hanya 2 Hari, PILIHAN DESIGN BANYAK, Gratis Ongkir ke Jabodetabek dan Minimal Order Hanya 10 Pcs">
+    <meta name="description" content="Cetak Buku Yasin {{ $r->name }} | Cetak Yasin {{ $r->name }} | Cetak Yasin Murah {{ $r->name }} | Cetak Yasin Cepat {{ $r->name }}">
     <meta name="author" content="">
-    <meta content='cetak yasin, buku yasin, cetak buku yasin, yasin murah, cetak yasin cepat' name='keywords'/>
+    <meta content='cetak yasin {{ $r->name }}, buku yasin {{ $r->name }}, cetak buku yasin {{ $r->name }}, yasin murah {{ $r->name }}, cetak yasin cepat {{ $r->name }}' name='keywords'/>
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>Cetak Buku Yasin Murah 5 Ribu | Cetak Buku Yasin Cepat 2 Hari Jadi</title>
+    <title>Cetak Buku Yasin Murah 5 Ribu | Cetak Buku Yasin Cepat 2 Hari Jadi | {{ $r->name }}</title>
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
@@ -102,9 +102,9 @@
             <div class="row">
                 <div class="col-lg-6 col-xs-12">
                     <div class="left-text-content">
-                        <p>Copyright &copy; {{ date('Y') }} BUKU YASIN ID. 
+                        <p>Copyright &copy; {{ date('Y') }} BUKU YASIN ID. {{ $r->name }}
                         
-                        - Developer: <a rel="nofollow noopener" href="https://instagram.com/mohfauzanaldi">Mohamad Fauzan Aldi</a></p>
+                        <br> Developer: <a rel="nofollow noopener" href="https://instagram.com/mohfauzanaldi">Mohamad Fauzan Aldi</a></p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-xs-12">

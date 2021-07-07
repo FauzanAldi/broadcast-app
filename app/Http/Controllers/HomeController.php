@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Slider;
 use App\Models\Testimoni;
 use App\Models\User;
+use App\Models\Regencies;
 use App\Models\Product;
 use Illuminate\Support\Facades\DB;  
 use Illuminate\Http\Request;
@@ -24,6 +25,24 @@ class HomeController extends BaseController
             'p'=>Product::all()
             
             ]);
+
+    }
+
+    public function regencies($seotitle){
+
+        $prefix="cetak-yasin-murah-dan-cepat-di-";
+        $total=strtoupper(str_replace("-"," ",str_replace($prefix,"",$seotitle)));
+        $r=Regencies::where('name',$total)->firstOrFail();
+
+        return view('yasin.domisili.index-domisili',[
+            's'=>Slider::all(),
+            't'=>Testimoni::all(),
+            'u'=>User::has('testimoni')->get(),
+            'p'=>Product::all(),
+            'r'=>$r
+            ]);
+
+        // dd($data);
 
     }
 
