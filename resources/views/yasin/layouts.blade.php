@@ -102,7 +102,7 @@
             <div class="row">
                 <div class="col-lg-6 col-xs-12">
                     <div class="left-text-content">
-                        <p>Copyright &copy; {{ date('Y') }} Bisnis Custom ID. 
+                        <p>Copyright &copy; {{ date('Y') }} BUKU YASIN ID. 
                         
                         - Developer: <a rel="nofollow noopener" href="https://instagram.com/mohfauzanaldi">Mohamad Fauzan Aldi</a></p>
                     </div>
@@ -210,6 +210,23 @@
                     }
                 });
 
+        }
+
+        let changeUsers = (id) =>  {
+            $.ajax(
+                {
+                    url: "{{ url('/testimoni') }}/"+id, 
+                    method : 'POST',
+                    data : {
+                        '_token' : '{{ csrf_token() }}',
+                        'id' : id
+                    },
+                    success: function(data){
+                        // console.log(data);
+                        
+                        $("#testimoni-content").html(data);
+                    }
+                });
         }
 
     </script>

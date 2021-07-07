@@ -59,8 +59,11 @@
                                 </div>
                             </div>
                             <div class="col-md-12">
+                                <a href="tel:6285888295270" class="main-button-icon">
+                                    Telpon Sekarang <i class="fa fa-phone"></i>
+                                </a>
                                 <a href="#testimonials" class="main-button-icon" onclick="AddHits(2)">
-                                    Pesan Sekarang <i class="fa fa-arrow-right"></i>
+                                    Lihat Produk <i class="fa fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -186,9 +189,9 @@
                         @endphp
                         @foreach($u as $key)
                             @if($no==1)
-                                <li class="active" data-filter=".key{{ $key->id }}">{{ $key->name }}</li>
+                                <li onclick="changeUsers({{ $key->id }})" class="active" data-filter=".key{{ $key->id }}">{{ $key->name }}</li>
                             @else
-                                <li data-filter=".key{{ $key->id }}">{{ $key->name }}</li>
+                                <li onclick="changeUsers({{ $key->id }})" data-filter=".key{{ $key->id }}">{{ $key->name }}</li>
                             @endif
                             @php
                                 $no++;
@@ -197,49 +200,10 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-9">
+            <div class="col-lg-9" id="testimoni-content">
                 
-                <div class="row wow fadeIn">
-                    @php
-                            $no=1;
-                    @endphp
-                    @foreach($u as $key)
-                        @if ($no>1)
-                            @php
-                                break;
-                            @endphp
-                        @endif
-                            
-                            @foreach($key->testimoni as $key2)
-            
-                            <!--Grid column-->
-                            <div class="col-lg-4 col-md-12 mb-4" >
-                                @if(strpos($key2->file, 'mp4') !== false)
-                        
-                                    <video style="width: 100%; max-height: 500px;" controls="">
-                                        <source src="{{ asset('uploads/'.$key2->file) }}" type="video/mp4">
-                                    </video>
-            
-                                @else
-                                <a href="{{ asset('uploads/'.$key2->file) }}" data-lightbox="image-1" data-title="File Utama">
-                                    <img src="{{ asset('uploads/'.$key2->file) }}" class="img-fluid" alt="">
-                                </a>
-            
-                                @endif
-            
-                            </div>
-                            
-                            @endforeach
-                        
-                        {{-- {{ $no }} --}}
-                        @php
-                            
-                            $no++;
-                        @endphp
-                    @endforeach
-                  <!--Grid column-->
-          
-                </div>
+                @include('yasin.testimoni',['u'=>$u])
+
             </div>
         </div>
       </div>
@@ -299,9 +263,9 @@
                             <h2>Jangan Ragu Untuk Hubungi Kami Jika Ada Pertanyaan</h2>
                         </div>
                         <ul class="contact-info">
-                            <li><img src="assets/images/contact-info-01.png" alt="">081776665851</li>
-                            <li><img src="assets/images/contact-info-02.png" alt="">info@bisniscustom.id</li>
-                            <li><img src="assets/images/contact-info-03.png" alt="">yasin.bisniscustom.id</li>
+                            <li><img src="assets/images/contact-info-01.png" alt="">085888295270</li>
+                            <li><img src="assets/images/contact-info-02.png" alt="">info@bukuyasin.id</li>
+                            <li><img src="assets/images/contact-info-03.png" alt="">bukuyasin.id</li>
                         </ul>
                     </div>
                 </div>

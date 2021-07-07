@@ -27,4 +27,12 @@ class HomeController extends BaseController
 
     }
 
+    public function getTestimoni(Request $request){
+        // dd('haha');
+        $u=User::where('id',$request->id)->get();
+
+        return view('yasin.testimoni',['u'=>$u]);
+
+    }
+
 }
